@@ -26,8 +26,8 @@ if __name__ == "__main__":
     id_list = sc.parallelize(idRank25.map(lambda x: {x[0]: list(x[1])}).collect())
     id_len = sc.parallelize(idRank25.map(lambda x: {x[0]: len(x[1])}).collect())
 
-    id_list.saveAsTextFile("IdAndMovieList")
-    id_len.saveAsTextFile("IdAndListCount")
+    id_list.saveAsTextFile("UserId-And-MovieIDList")
+    id_len.saveAsTextFile("UserId-And-RankedMovieListCount")
 
     sc.stop()
 
