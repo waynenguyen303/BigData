@@ -23,8 +23,9 @@ object movieRank {
     System.out.println(filter25.count())
 
     // save to file the user id and movie list, user id and movie list length
-    filter25.saveAsTextFile("movie_list")
-    filter25_size.saveAsTextFile("movie_length")
+    filter25.saveAsTextFile("UserId_And_movie_list_output")
+    filter25_size.saveAsTextFile("UserId_And_movie_List_length_output")
     System.out.println("Scala Spark Works")
+    sc.stop()
   }
 }
