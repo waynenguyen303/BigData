@@ -1,1 +1,30 @@
-This is a git repo
+This is a git repo for CS5542 Big Data
+
+--------------------------------------------------------------------------------
+ICP - IN CLASS EXERCISE
+
+ICP 1 - Installation and Configuration of software for Big Data 
+https://github.com/waynenguyen303/big-data-cs5542/wiki/ICP-In-Class-Exercise-1-(Software-Installation)
+
+ICP 2 - Spark Programing Introduction
+https://github.com/waynenguyen303/big-data-cs5542/wiki/ICP-In-Class-Exercise-2-(Spark-Program)
+
+ICP 3 - Linear Regression and K-Means
+https://github.com/waynenguyen303/big-data-cs5542/wiki/ICP-In-Class-Exercise-3-(Linear-Regression-and-K-Means)
+
+ICP 4 - Confusion Matrix and Stats
+https://github.com/waynenguyen303/big-data-cs5542/wiki/ICP-In-Class-Exercise-4-(Confusion-Matrix-and-Stats)
+
+ICP 5 - Classification Algorithms(RF, DT, NB)
+https://github.com/waynenguyen303/big-data-cs5542/wiki/ICP-In-Class-Exercise-5-(Classification-Algorithms)
+
+
+---------------------------------------------------------------------------------
+LAB ASSIGNMENTS
+
+Lab 1 - Spark Transformations & Actions, Github, and Zenhub
+https://github.com/waynenguyen303/big-data-cs5542/wiki/Lab-1---Spark-Transformation-&-Action,-Github,-and-Zenhub
+
+Lab2 - Video Machine Learning Applications & Analytics. Image Classifications with Naive Bayes, Random Forest, and Decision Trees
+https://github.com/waynenguyen303/big-data-cs5542/wiki/Lab-2---Machine-Learning-Applications-&-Analytics,-Image-Classifications
+
