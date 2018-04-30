@@ -1,5 +1,0 @@
-watches
-tops
-hats
-bottoms
-shoes
