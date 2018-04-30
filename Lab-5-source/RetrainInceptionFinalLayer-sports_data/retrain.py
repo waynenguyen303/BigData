@@ -934,7 +934,7 @@ if __name__ == '__main__':
   parser.add_argument(
       '--how_many_training_steps',
       type=int,
-      default=100,  #***************************
+      default=500,  #***************************
       help='How many training steps to run before ending.'
   )
   parser.add_argument(

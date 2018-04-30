@@ -31,4 +31,8 @@ dependencies {
     // https://mvnrepository.com/artifact/com.clarifai.clarifai-api2/core
     compile group: 'com.clarifai.clarifai-api2', name: 'core', version: '2.4.0'
     compile 'com.google.code.gson:gson:2.8.0'
+    compile 'org.tensorflow:tensorflow-android:1.2.0-rc0'
+    //compile 'org.tensorflow:tensorflow-lite:+'
+    //compile 'com.google.apis:google-api-services-kgsearch:v1-rev230-1.23.0'
+    compile 'com.miguelcatalan:materialsearchview:1.4.0'
 }

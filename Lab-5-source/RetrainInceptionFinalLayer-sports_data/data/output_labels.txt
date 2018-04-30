@@ -1,10 +1,5 @@
-watches
-puma logo
-adidas logo
-tops
-bottoms
-newbalance logo
-shoes
-hats
 underarmor logo
+newbalance logo
+adidas logo
 nike logo
+puma logo

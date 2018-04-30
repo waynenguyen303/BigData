@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://C:\Users\Waynage007\Downloads\BigData\Lab-3-source\android-clarifai-spark-object detection\ASE_Lab5.iml" filepath="C:\Users\Waynage007\Downloads\BigData\Lab-3-source\android-clarifai-spark-object detection\ASE_Lab5.iml" />
       <module fileurl="file://$PROJECT_DIR$/android-clarifai-spark-object detection.iml" filepath="$PROJECT_DIR$/android-clarifai-spark-object detection.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>

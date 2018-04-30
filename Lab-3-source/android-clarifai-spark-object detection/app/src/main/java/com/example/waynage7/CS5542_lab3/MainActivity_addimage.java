@@ -38,14 +38,18 @@ import clarifai2.dto.input.ClarifaiImage;
 import clarifai2.dto.input.ClarifaiInput;
 import clarifai2.dto.model.output.ClarifaiOutput;
 import clarifai2.dto.prediction.Concept;
+import clarifai2.dto.prediction.Logo;
+import clarifai2.internal.AutoValueTypeAdapterFactory;
 import okhttp3.Call;
 import okhttp3.Callback;
-import okhttp3.Headers;
 import okhttp3.MediaType;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.RequestBody;
 import okhttp3.Response;
+
+import org.tensorflow.contrib.android.TensorFlowInferenceInterface;
+
 
 
 
@@ -211,21 +215,27 @@ public class MainActivity_addimage extends AppCompatActivity {
         ClarifaiClient client = new ClarifaiBuilder(clarifaiID,clarifaiSecret)
                 .buildSync();
         client.getToken();
-        ClarifaiResponse response = client.getDefaultModels().generalModel().predict()
+        ClarifaiResponse response = client.getDefaultModels().logoModel().predict()
                 .withInputs(ClarifaiInput.forImage(ClarifaiImage.of(byteArray)))
                 .executeSync();
-        List<ClarifaiOutput<Concept>> pred = (List<ClarifaiOutput<Concept>>) response.get();
+        List<ClarifaiOutput<Logo>> pred = (List<ClarifaiOutput<Logo>>) response.get();
 
+
+        System.out.println(pred);
         if (pred.isEmpty()){System.out.println("NO Predictions");}
-        List<Concept> feature = pred.get(0).data();
+        List<Logo> feature = pred.get(0).data();
+
+        System.out.println(feature.get(0).concepts().get(0).name());
+
+
 
         String feat = "Features:\n";
         String prob = "Accuracy:\n";
 
         for (int i =0;i< feature.size(); i++){
-            feat = feat + feature.get(i).name()+"\n";
-            prob = prob + feature.get(i).value()+"\n";
-            System.out.println(feature.get(i).name() + " - " + feature.get(i).value());
+            feat = feat + feature.get(0).concepts().get(i).name()+"\n";
+            prob = prob + feature.get(0).concepts().get(i).value()+"\n";
+            System.out.println(feature.get(0).concepts().get(i).name() + " - " + feature.get(0).concepts().get(i).value());
         }
 
         // print to Textviews
@@ -303,24 +313,6 @@ public class MainActivity_addimage extends AppCompatActivity {
             e.printStackTrace();
         }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
 
 
@@ -340,7 +332,7 @@ public class MainActivity_addimage extends AppCompatActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.action_search) {
             return true;
         }
         return super.onOptionsItemSelected(item);
